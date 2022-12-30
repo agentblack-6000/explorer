@@ -240,7 +240,7 @@ def explore_apod(date: str, file_name: str) -> int:
     return apod_response.status_code
 
 
-def explore_mars_rover_photos(file_name: str, date: str):
+def explore_mars_rover_photos(file_name: str, date: str) -> int:
     """
     Accesses NASA's Mars Rover Photos API, and puts image urls taken by the Curiosity Mars rover
     in specified text file, and saves the first image found. See NASA's Mars Rover Photos API at
