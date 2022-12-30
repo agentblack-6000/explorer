@@ -1,3 +1,7 @@
+"""
+Unit tests for the functions in project.py, a NASA API explorer that can get near Earth object data,
+Mars rover pictures, and the Astronomy Picture of the Day
+"""
 from project import explore_asteroids, explore_apod, explore_mars_rover_photos
 
 
