@@ -36,7 +36,8 @@ TIMEOUT = 20
 
 def main():
     """
-    Validates the API key and command line arguments using argparse, then calls the relevant methods.
+    Validates the API key and command line arguments using argparse, then calls
+    the relevant methods.
 
     :returns: None
     """
@@ -84,8 +85,8 @@ def explore_asteroids(start_date: str, end_date: str) -> int:
     the given start and end date. See NASA's Asteroids - NeoWs API at https://api.nasa.gov for more
     information and to sign up for an API key.
 
-    Data set provided by- https://cneos.jpl.nasa.gov (CNEOS is NASA's center for computing asteroid and comet
-    orbits and their odds of Earth impact).
+    Data set provided by- https://cneos.jpl.nasa.gov (CNEOS is NASA's center for computing
+    asteroid and comet orbits and their odds of Earth impact).
 
     :param start_date: The start date
     :type start_date: str
@@ -140,7 +141,7 @@ def explore_asteroids(start_date: str, end_date: str) -> int:
     print("Writing data to csv file...")
     file_name = "near_earth_object_data.csv"
     # Opens a new csv file and writes data
-    with open(file_name, "w") as file:
+    with open(file_name, "w", encoding="utf-8") as file:
 
         # Writes data to csv using DictWriter
         field_names = ["date", "name", "estimated_diameter_min_meters",
@@ -181,8 +182,9 @@ def explore_asteroids(start_date: str, end_date: str) -> int:
 
 def explore_apod(date: str, file_name: str) -> int:
     """
-    Saves the Astronomy Picture of the Day from NASA's APOD API with the specified file name. See NASA's APOD
-    API at https://api.nasa.gov for more information and to signup for an API key.
+    Saves the Astronomy Picture of the Day from NASA's APOD API with the specified file name.
+    See NASA's APOD API at https://api.nasa.gov for more information and to signup for an
+    API key.
 
     See API documentation at https://github.com/nasa/apod-api, and the APOD website
     at- https://apod.nasa.gov/apod/astropix.html
@@ -230,7 +232,7 @@ def explore_apod(date: str, file_name: str) -> int:
     # Gets the image and saves it
     image = requests.get(image_url, timeout=TIMEOUT)
 
-    with open(file_name, 'wb') as file:
+    with open(file_name, 'wb', encoding=None) as file:
         file.write(image.content)
 
     print(f"Saved image as {file_name}.")
@@ -295,7 +297,7 @@ def explore_mars_rover_photos(file_name: str, date: str):
     images = []
     print(f"Saving urls to {file_name}...")
     # Writes url to file
-    with open(file_name, "w") as file:
+    with open(file_name, "w", encoding="utf-8") as file:
         for photo in photos:
             image_url = photo['img_src']
             file.write(f"{image_url}\n")
@@ -315,7 +317,7 @@ def explore_mars_rover_photos(file_name: str, date: str):
     file_name = f"mars{file_extension}"
     image = requests.get(image_url, timeout=10)
 
-    with open(file_name, 'wb') as file:
+    with open(file_name, 'wb', encoding=None) as file:
         file.write(image.content)
 
     print(f"Image saved as {file_name}.")
