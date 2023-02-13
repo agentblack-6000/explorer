@@ -111,7 +111,7 @@ def explore_mars_rover_photos(file_name: str, date: str) -> int:
 
     print("Getting API response...")
     # Gets API response
-    api_response = requests.get(mars_endpoint, params, timeout=10)
+    api_response = requests.get(mars_endpoint, params, timeout=TIMEOUT)
     rover_images = api_response.json()
 
     try:
@@ -141,7 +141,7 @@ def explore_mars_rover_photos(file_name: str, date: str) -> int:
     print("Saving first image...")
     # Gets image and saves it
     file_name = f"mars{file_extension}"
-    image = requests.get(image_url, timeout=10)
+    image = requests.get(image_url, timeout=TIMEOUT)
 
     with open(file_name, 'wb', encoding=None) as file:
         file.write(image.content)
