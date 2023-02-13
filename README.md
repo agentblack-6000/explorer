@@ -86,6 +86,7 @@ import os
 import requests
 ...
 API_KEY = os.environ.get("API_KEY")
+...
 ```
 
 To export the API key, click on Shell, next to Console, on replit
@@ -101,6 +102,78 @@ If you didn't sign up for an API key, NASA allows using a demo key, which can be
 ```shell
 export API_KEY=DEMO_KEY
 ```
+
+### ```main()```
+First, we need to check if the API key exists, and exit the program if the API key doesn't exist. This can be done
+using the builtin ```sys``` module, with the ```sys.exit()``` function. See [documentation](https://python.readthedocs.io/en/latest/library/sys.html)
+```python
+...
+import sys
+...
+
+def main():
+    ...
+    # Validate API key
+    if not API_KEY:
+        sys.exit("API Key not set")
+    ...
+```
+
+#### Setting up ```argparse```
+First, we need to look at the Mars Rover Photos API [documentation](https://github.com/corincerami/mars-photo-api), and 
+look it up on [api.nasa.gov](https://api.nasa.gov/) as well. We'll be querying by Earth date to keep things simple.
+
+After going through the documentation, the following parameters are necessary to include in the request-
+1. The API key, which we've already gotten and validated
+2. The Earth date(date Curiosity clicked the photos), which we need to get from the user
+
+In addition to this, we also need to request a file name from the user to store the image URLs. Since we already 
+have the API key from an environment variable, we need to accept a date and the file name from the user, using
+```argparse```.
+
+Before we start, read the ```argparse``` [documentation](https://docs.python.org/3/library/argparse.html).
+We want to run the program in the following way-
+```shell
+python project.py -m file_name date
+```
+The reason for the -m flag is so we can expand the project later on, for example with other APIs, and this approach
+makes it easy to add more command line arguments.
+
+First, we need to sort out our imports, as per the PEP-8 style guide
+```python
+import os
+import sys
+from argparse import ArgumentParser
+
+import requests
+```
+Since we need to use the ```ArgumentParser``` class, we'll just import that instead of the entire module.
+
+Then, we need to configure ```argparse```, using the [documentation](https://docs.python.org/3/library/argparse.html)-
+```python
+import os
+import sys
+from argparse import ArgumentParser
+
+import requests
+
+def main():
+    ...
+    # Create argument parser and add optional command line arguments
+    parser = ArgumentParser(description="A NASA API explorer that can get near Earth object data, "
+                                        "Mars rover pictures, and the Astronomy "
+                                        "Picture of the Day.")
+    parser.add_argument("-m", "--mars", nargs=2, dest="mars", metavar=("file_name", "date"),
+                        help="write the Mars rover image urls to a text file")
+
+    # Parse arguments
+    args = parser.parse_args()
+```
+The above code block first sets up the ```ArgumentParser``` as per the documentation(I've left out ```prog``` and 
+```epilog``` for simplicity, feel free to add them, as well as modify existing keyword arguments as per the [docs](https://docs.python.org/3/library/argparse.html#argumentparser-objects)), and 
+adds an argument flag (-m for Mars), which accepts 2 parameters or ```nargs```, stored in ```dest="mars"```, which we'll
+use later on to validate the command line arguments, complete with ```metavar=("file_name", "date")``` for usage 
+messages. The documentation for [```parser.add_argument()```](https://docs.python.org/3/library/argparse.html#the-add-argument-method)
 
 ## Finishing up
 Link to the final source code-
