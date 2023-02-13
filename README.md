@@ -408,5 +408,7 @@ Link to the final source code-
 
 ## Hacking
 Here are some ways to expand on the project-
-1. [Add more APIs, complete with command line arguments]()
+1. [Add another API](https://replit.com/@agentblack6000/PyCuriosity-more?v=1)
+2. Integrate into a [Flask app](https://replit.com/@agentblack6000/PyCuriosity-flask?v=1)
+3. Create a [GUI](https://replit.com/@agentblack6000/PyCuriosity-GUI?v=1) with [`tkinter`](https://docs.python.org/3/library/tkinter.html)
 
