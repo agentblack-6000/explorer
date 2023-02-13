@@ -1,7 +1,6 @@
 """
-A NASA API explorer that can get near Earth object data,Mars rover pictures, and
-the Astronomy Picture of the Day. Sign up for an API Key at- https://api.nasa.gov,
-then set it as an environment variable as follows-
+A NASA API explorer that can get Mars rover pictures.
+Sign up for an API Key at- https://api.nasa.gov, then set it as an environment variable as follows-
 
 export API_KEY=value
 
@@ -11,14 +10,13 @@ export API_KEY="DEMO_KEY"
 
 Run the explorer with the following command line arguments-
 
+A NASA API explorer that can access Mars rover Curiosity's images.
+
 options:
   -h, --help            show this help message and exit
-  -as start_date end_date, --asteroids start_date end_date
-                        write near Earth object data to a csv file and print 'rows' rows of data
-  -ap date file_name, --apod date file_name
-                        save the Astronomy Picture of the Day('date') as 'file_name'(no extension)
   -m file_name date, --mars file_name date
                         write the Mars rover image urls to a text file
+
 """
 import datetime as dt
 import os
@@ -46,9 +44,7 @@ def main() -> None:
         sys.exit("API Key not set")
 
     # Create argument parser and add optional command line arguments
-    parser = ArgumentParser(description="A NASA API explorer that can get near Earth object data, "
-                                        "Mars rover pictures, and the Astronomy "
-                                        "Picture of the Day.")
+    parser = ArgumentParser(description="PyCuriosity is an API explorer that can get Mars rover Curiosity's images")
     parser.add_argument("-m", "--mars", nargs=2, dest="mars", metavar=("file_name", "date"),
                         help="write the Mars rover image urls to a text file")
 

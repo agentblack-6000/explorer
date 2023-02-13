@@ -405,3 +405,8 @@ Link to the final source code-
 
 [PyCuriosity Repl](https://replit.com/@agentblack6000/PyCuriosity?v=1)
 
+
+## Hacking
+Here are some ways to expand on the project-
+1. [Add more APIs, complete with command line arguments]()
+
