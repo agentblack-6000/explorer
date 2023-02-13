@@ -33,7 +33,7 @@ DATE = re.compile(r"(\d\d\d\d)-(\d\d)-(\d\d)")
 TIMEOUT = 20
 
 
-def main():
+def main() -> None:
     """
     Validates the API key and command line arguments using argparse, then calls
     the relevant methods.
@@ -60,6 +60,7 @@ def main():
         parser.print_help()
         sys.exit()
 
+    # Call relevant methods
     if args.mars is not None:
         file_name, date = args.mars
         explore_mars_rover_photos(file_name, date)
