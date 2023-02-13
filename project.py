@@ -20,7 +20,6 @@ options:
   -m file_name date, --mars file_name date
                         write the Mars rover image urls to a text file
 """
-import csv
 import datetime as dt
 import os
 import re
