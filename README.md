@@ -410,6 +410,6 @@ Link to the final source code-
 ## Hacking
 Here are some ways to expand on the project(repls linked below)-
 1. [Add another API](https://replit.com/@agentblack6000/PyCuriosity-more?v=1), in this example I've added the APOD API, but you could expand even further and potentially add all of [NASA's APIs](https://api.nasa.gov), and use the data to plot graphs, store images, etc.
-2. Integrate into a [Flask app](https://replit.com/@agentblack6000/PyCuriosity-flask?v=1), or a [Django app](https://docs.djangoproject.com/en/4.1/intro/tutorial01/) if you're super experienced, to showcase all those images we collected, instead of just saving the first one.
+2. Integrate into a [Flask app(replit)](https://replit.com/@agentblack6000/PyCuriosity-flask?v=1), or a [Django app(how to write a Django app)](https://docs.djangoproject.com/en/4.1/intro/tutorial01/) if you're super experienced, to showcase all those images we collected, instead of just saving the first one.
 3. Create a [GUI](https://replit.com/@agentblack6000/PyCuriosity-GUI?v=1) with [`tkinter`](https://docs.python.org/3/library/tkinter.html), because GUIs look nicer and cleaner compared to a command line application.
 
