@@ -314,10 +314,7 @@ Now that we've got the API response and a good picture of what keys we need, we 
 returned-
 ```python
 def explore_mars_rover_photos(file_name, date):
-    ...
-    api_response = requests.get(mars_endpoint, params, timeout=TIMEOUT)
-    rover_images = api_response.json()
-    
+    ...    
     try:
         photos = rover_images["photos"]
     except KeyError:
