@@ -261,7 +261,7 @@ date is in the correct format. The user could've entered 8912-23-95, which would
 isn't a valid date. This is where we split the year, month, and day using the [```split()```](https://docs.python.org/3/library/string.html)
 method, then using Python's builtin [```datetime```](https://docs.python.org/3/library/datetime.html) module we convert it to a Python datetime object. 
 
-As per the [datetime](https://docs.python.org/3/library/datetime.html) documentation, a ```ValueError``` will be raised
+As per the [datetime documentation](https://docs.python.org/3/library/datetime.html), a ```ValueError``` will be raised
 if the date isn't valid, so we don't need to setup if-else conditions for validating that the month is 1 <= month <= 12, and so on,
 instead just catch the ValueError using a [try, except, else](https://docs.python.org/3/tutorial/errors.html#handling-exceptions)
 block.
