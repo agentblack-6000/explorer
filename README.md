@@ -389,7 +389,7 @@ according to the PEP-8 style guide. Go ahead and add the documentation as per th
 
 ### pylint
 A linter is a great tool for formatting code. `pylint` is a popular linter used by the Python community, and another
-linter called `black`, which is slightly less "noisy" or particular is also available.
+linter called `black`, which is slightly less "noisy" or particular is also great if `pylint` feels a little overwhelming.
 To use `pylint`, run the following commands-
 ```shell
 pip install pylint
