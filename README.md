@@ -114,8 +114,7 @@ export API_KEY=DEMO_KEY
 ```
 
 ### Programming ```main()```
-First, we need to check if the API key exists, and exit the program if the API key doesn't exist. This can be done
-using the builtin ```sys``` module, with the ```sys.exit()``` function. See [documentation](https://python.readthedocs.io/en/latest/library/sys.html),
+First, we need to check if the API key exists, and exit the program if the API key doesn't exist, as it's a requirement to call the API. This can be done using the builtin ```sys``` module, with the ```sys.exit()``` function. See [documentation](https://python.readthedocs.io/en/latest/library/sys.html),
 and add the ```sys``` module to your imports
 ```python
 ...
