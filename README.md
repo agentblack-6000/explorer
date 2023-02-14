@@ -48,6 +48,8 @@ After going through the documentation, the following parameters are necessary to
 1. An API key
 2. The Earth date(date Curiosity clicked the photos), which we need to get from the user
 
+Also, we need a place to store the data we're requesting, so we also need a file name from the user.
+
 #### Starting the project
 Fork the [starting repl](https://replit.com/@agentblack6000/pycuriosity-init?v=1). Let's see what we got-
 - Right away you'll see a bunch of TODOs, incase you want to attempt the project solo
