@@ -224,7 +224,7 @@ In particular, the date needs to be in the format YYYY-MM-DD. To validate this i
 searching for patterns in a string, and in this case we're trying to verify our date matches the pattern YYYY-MM-DD.
 The documentation for the ```re``` module can be found [here](https://docs.python.org/3/library/re.html). Regexes are
 very powerful tools, and are although challenging to compose for beginners, consider reading the [documentation](https://docs.python.org/3/library/re.html),
-then check out this [website](https://regex101.com)(Select the flavour as Python before starting out) to get a better
+then check out this [website](https://regex101.com) (Select the flavour as Python before starting out) to get a better
 idea for how regexes work.
 
 Moving on, we need to check
