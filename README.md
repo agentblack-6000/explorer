@@ -44,7 +44,7 @@ on making a big project, especially with a team.
 First, we need to look at the Mars Rover Photos API [documentation](https://github.com/corincerami/mars-photo-api), and 
 it's a good idea to look it up on [api.nasa.gov](https://api.nasa.gov/) as well. We'll be querying by Earth date to keep things simple.
 
-After going through the documentation, the following parameters are necessary to include in the request-
+After going through the documentation, the following parameters are necessary to include in the request(take a look at the sample query)-
 1. An API key
 2. The Earth date(date Curiosity clicked the photos), which we need to get from the user
 
