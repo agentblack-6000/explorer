@@ -31,7 +31,7 @@ the data to a text file, and potentially save the first image if we find any.
 Be sure to read the previous section if you're still confused as to what PyCuriosity is.
 
 All great projects, big or small, always start with a plan. Planning out the project ahead of time saves confusion and 
-provides a clear picture of the project, the resources to use, the skills to acquire and use. 
+provides a clear picture of the project, the resources to use, the skills to acquire. 
 
 ![Battle Plan GIF from Home Alone](https://cloud-odfqnnmkf-hack-club-bot.vercel.app/0giphy.gif)
 
