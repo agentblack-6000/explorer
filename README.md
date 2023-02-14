@@ -377,11 +377,11 @@ def explore_mars_rover_photos(file_name, date):
     return api_response.status_code
 ```
 The above code snippet makes a GET request with the image url, and using the `wb` or write binary mode of Python's
-`open` function, we write the image data to a file, and finally return the API status code.
+[`open` function](https://docs.python.org/3/library/functions.html#open), we write the image to a file, and finally return the API status code.
 
 ## Last steps
-Now, to publish code, we need to document it, add comments and function annotations, and the necessary docstrings,
-according to the PEP-8 style guide.
+To publish code, we need to document it, add comments and function annotations, and the necessary docstrings,
+according to the PEP-8 style guide. Go ahead and add the documentation as per the PEPs(below).
 
 > Docstrings: https://peps.python.org/pep-0257/
 >  
