@@ -75,10 +75,11 @@ trusted parties with the right API key can request information, which is very us
 like weather data, population, etc. which might require paying for an API key. However, NASA's APIs are public and free,
 so we don't really need to signup and pay for an API key.
 
-But, declaring an API key in a program is dangerous, as when code is visible to the public, everyone can copy-paste the API
-key and make requests, accessing sensitive data, which isn't great if you had to pay for the API key, and it may lead to
-security breaches. Even though we aren't paying for an API key, and the data we're accessing is completely public, as is convention, 
-we'll export the API key as an environment variable in the terminal, and access it using the  builtin ```os``` module.
+But, declaring an API key in a program is dangerous(recall it's not in ```explore_mars_rover_photos(file_name, date)```'s signature), 
+as when code is visible to the public, everyone can copy-paste the API key and make requests, accessing sensitive data, which isn't great 
+if you had to pay for the API key, and it may lead to security breaches or data leaks. Even though we aren't paying for an API key, 
+and the data we're accessing is completely public and free of cost, as is convention, we'll export the API key as an environment variable 
+in the CLI(terminal/command line), and access it using the  builtin ```os``` module.
 
 
 ### Setting up the ```os``` module
