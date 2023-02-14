@@ -300,7 +300,7 @@ long time, and then stop or timeout if it doesn't get any response, otherwise th
 Then we convert the API response to JSON data, or essentially a massive Python dictionary to access the data.
 ### Parsing the JSON data
 To get a good idea for how the returned JSON data looks like, consider installing this [Chrome extension](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc),
-and then trying out a sample query:
+and then try out a sample query:
 > https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
 
 This should give you a good feel for how the JSON data returned looks like, and what keys we need to access.
