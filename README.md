@@ -62,7 +62,8 @@ import argparse
 import requests
 ```
 - Next, you'll see the ```main()``` and ```explore_mars_rover_photos(file_name, date)``` functions, also with a bunch of
-TODOs. Notice how ```explore_mars_rover_photos(file_name, date)```'s signature includes the requirements we need.
+TODOs. Notice how `explore_mars_rover_photos(file_name, date)`'s signature includes the requirements we need. We'll use
+`explore_mars_rover_photos(file_name, date)` to call the API and `main()` to sort out the command line arguments.
 - Finally, we have this code snippet:
 ```python
 if __name__ == "__main__":
