@@ -131,8 +131,8 @@ def main():
 The above code snippet uses ```sys.exit()``` to exit the program if the API_KEY doesn't exist.
 
 ### Configuring ```argparse```
-Recall we also need to request a file name from the user to store the image URLs. Since we already 
-have the API key from an environment variable, we need to accept a date and the file name from the user.
+Recall we also need to request a file name from the user to store the image URLs, and a date. Since we already 
+have the API key from an environment variable, we have to set up `argparse` to accept a date and file name.
 
 Before we start, read the ```argparse``` [documentation](https://docs.python.org/3/library/argparse.html).
 We want to run the program in the following way-
